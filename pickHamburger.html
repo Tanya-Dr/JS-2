@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hamburgerStyle.css">
+    <script src="burger.js"></script>
+</head>
+<body>
+    <main>
+        <form action = "#" class = "fastfoodForm center">
+            <h3 class = "heading">Выберите размер гамбурегра</h3>
+            <div class = "input size">
+                <label class = "size__label">
+                    <input type = "radio" name = "size__name" class = "size__radio" data-size = "small"> Маленький (50 рублей, 20 калорий)
+                </label> 
+                <label class = "size__label">
+                    <input type = "radio" name = "size__name" class = "size__radio" data-size = "big"> Большой (100 рублей, 40 калорий)
+                </label> 
+            </div>   
+            <h3 class = "heading">Выберите начинку гамбурегра</h3>               
+            <div class = "input stuffing">
+                <label class = "stuffing__label">
+                    <input type ="radio" name = "stuffing__name" class = "stuffing__radio" data-stuffing = "cheese"> С сыром (+10 рублей, +20 калорий)
+                </label> 
+                <label class = "stuffing__label">
+                    <input type ="radio" name = "stuffing__name" class = "stuffing__radio" data-stuffing = "salad"> С салатом (+20 рублей, +5 калорий)
+                </label> 
+                <label class = "stuffing__label">
+                    <input type ="radio" name = "stuffing__name" class = "stuffing__radio" data-stuffing = "fries"> С картофелем (+15 рублей, +10 калорий)
+                </label> 
+            </div> 
+            <h3 class = "heading">Гамбургер также можно посыпать приправой или полить майонезом</h3>
+            <div class = "input topping">
+                <label class = "topping__label">
+                    <input type = "checkbox" class = "topping__checkbox" data-topping = "seasoning"> С приправой (+15 рублей, +0 калорий)
+                </label>
+                <label class = "topping__label">
+                    <input type = "checkbox" class = "topping__checkbox" data-topping = "mayonnaise"> С майонезом (+20 рублей, +5 калорий)
+                </label>
+            </div>  
+            <button type = "button" class = "button__result">Рассчитать стоимость и калорийность гамбургера</button> 
+            <div class = "result"></div>
+        </form>
+    </main>
+</body>
+</html>
