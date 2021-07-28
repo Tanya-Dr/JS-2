@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "app">
+        <header class = "top center">
+            <search @showresult="filterGoods" v-model="searchLine"></search>            
+            <button class = "cart-button btn" type = "button" @click = "showCart">Cart</button>
+        </header>
+        
+        <main class="center">
+            <error-modal v-if="showErrorModal" @close="showErrorModal = false"></error-modal>
+            <goods-list :goods="filteredGoods" @additemtocart="addItemToCart"></goods-list>
+            <cart :goods="cartList" @delitemfromcart="deleteItemFromCart" @clearcart="clearCart" :visability="isVisibleCart" @closecart="isVisibleCart = false" :sum="sum"></cart>            
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
